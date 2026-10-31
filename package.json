@@ -1,0 +1,21 @@
+{
+  "name": "rentease",
+  "version": "1.0.0",
+  "description": "Blockchain based rental agreement platform with Admin, Owner and Tenant roles",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "hardhat": "hardhat node --hostname 127.0.0.1 --port 8545",
+    "compile": "truffle compile",
+    "migrate": "truffle migrate --reset --network development",
+    "seed": "truffle exec scripts/seed.js --network development",
+    "approve:owner": "truffle exec scripts/approve-owner.js --network development",
+    "test": "truffle test --network development --migrate-none",
+    "backend": "npm --prefix backend start",
+    "frontend": "npm --prefix frontend run dev -- --host 127.0.0.1"
+  },
+  "devDependencies": {
+    "hardhat": "^2.29.1",
+    "truffle": "^5.11.5"
+  }
+}
